@@ -7,7 +7,7 @@ from pyalgotrade.technical import ma
 
 class Accumulator(strategy.BacktestingStrategy):
     def __init__(self, feed, instrument, buy_offset, buy_percent):
-        super(Accumulator, self).__init__(feed, 10000)
+        super(Accumulator, self).__init__(feed, 90000)
         self.__position = None
         self.__instrument = instrument
         self.__sma = ma.SMA(feed[instrument].getPriceDataSeries(), 5)
